@@ -1,0 +1,74 @@
+//= require css/jquery.uls
+//= require css/jquery.uls.grid
+//= require css/jquery.uls.lcd
+
+@import 'css/jquery.uls';
+@import 'css/jquery.uls.grid';
+@import 'css/jquery.uls.lcd';
+
+.uls-menu {
+  z-index: 100000;
+
+  h1 {
+    margin: 16px 0px;
+  }
+
+  .row {
+    display: block;
+
+    * {
+      width: auto;
+      max-width: none;
+    }
+
+    li {
+      width: max-content;
+    }
+  }
+}
+
+.uls-trigger {
+  cursor: pointer;
+  -webkit-mask-image: image-url('images/language.svg');
+  mask-image: image-url('images/language.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: 4.8px 4.8px;
+  mask-position: 4.8px 4.8px;
+  width: 29.6px;
+  height: 100%;
+}
+
+.dropdown-item {
+  & > .uls-trigger {
+    display: block;
+    height: 24px;
+    width: 100%;
+    background-color: var(--bs-dropdown-link-color);
+    padding: 0;
+
+    &:dir(ltr) {
+      -webkit-mask-position: 0px 2px;
+      mask-position: 0px 2px;
+    }
+
+    &:dir(rtl) {
+      -webkit-mask-position: 100% 2px;
+      mask-position: 100% 2px;
+    }
+  }
+
+  &:hover > .uls-trigger {
+    background-color: white;
+  }
+}
+
+.uls-icon-close {
+  background-image: image-url('images/close.png');
+  background-image: linear-gradient(transparent, transparent), image-url('images/close.svg');
+}
+
+.uls-menu .uls-search-label {
+  background-image: image-rl('images/search.png');
+  background-image: linear-gradient(transparent, transparent), image-url('images/search.svg');
+}
