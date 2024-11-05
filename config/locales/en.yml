@@ -1839,6 +1839,7 @@ en:
       show: "Show"
       delete: "Delete"
       undelete: "Undo delete"
+      location_name_warning: "Location name doesn't match home location"
     update:
       success: Profile updated.
       failure: Couldn't update profile.
